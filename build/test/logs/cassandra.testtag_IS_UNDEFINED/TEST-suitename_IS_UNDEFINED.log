@@ -1,0 +1,491 @@
+INFO  [main] 2020-01-14 18:11:00,654 Configuration location: file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+DEBUG [main] 2020-01-14 18:11:00,666 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:01,038 Node ppp configuration:[allocate_tokens_for_keyspace=null; allocate_tokens_for_local_replication_factor=null; audit_logging_options=AuditLogOptions{enabled=false, logger='BinAuditLogger', included_keyspaces='', excluded_keyspaces='system,system_schema,system_virtual_schema', included_categories='', excluded_categories='', included_users='', excluded_users='', audit_logs_dir='./audit/', archive_command='', roll_cycle='HOURLY', block=true, max_queue_weight=268435456, max_log_size=17179869184}; authenticator=null; authorizer=null; auto_bootstrap=true; auto_snapshot=true; automatic_sstable_upgrade=false; back_pressure_enabled=false; back_pressure_strategy=null; batch_size_fail_threshold_in_kb=50; batch_size_warn_threshold_in_kb=5; batchlog_replay_throttle_in_kb=1024; block_for_peers_in_remote_dcs=false; block_for_peers_timeout_in_secs=10; broadcast_address=null; broadcast_rpc_address=null; buffer_pool_use_heap_if_exhausted=true; cas_contention_timeout_in_ms=1000; cdc_enabled=false; cdc_free_space_check_interval_ms=250; cdc_raw_directory=build/test/cassandra/cdc_raw; cdc_total_space_in_mb=0; client_encryption_options=<REDACTED>; cluster_name=Test Cluster; column_index_cache_size_in_kb=2; column_index_size_in_kb=4; commit_failure_policy=stop; commitlog_compression=null; commitlog_directory=build/test/cassandra/commitlog; commitlog_max_compression_buffers_in_pool=3; commitlog_periodic_queue_size=-1; commitlog_segment_size_in_mb=5; commitlog_sync=batch; commitlog_sync_batch_window_in_ms=1.0; commitlog_sync_group_window_in_ms=NaN; commitlog_sync_period_in_ms=0; commitlog_total_space_in_mb=null; compaction_large_partition_warning_threshold_mb=100; compaction_throughput_mb_per_sec=0; concurrent_compactors=4; concurrent_counter_writes=32; concurrent_materialized_view_builders=1; concurrent_materialized_view_writes=32; concurrent_reads=32; concurrent_replicates=null; concurrent_validations=2147483647; concurrent_writes=32; corrupted_tombstone_strategy=exception; counter_cache_keys_to_save=2147483647; counter_cache_save_period=7200; counter_cache_size_in_mb=null; counter_write_request_timeout_in_ms=5000; credentials_cache_max_entries=1000; credentials_update_interval_in_ms=-1; credentials_validity_in_ms=2000; cross_node_timeout=false; data_file_directories=[Ljava.lang.String;@9225652; diagnostic_events_enabled=false; disk_access_mode=mmap; disk_failure_policy=ignore; disk_optimization_estimate_percentile=0.95; disk_optimization_page_cross_chance=0.1; disk_optimization_strategy=ssd; dynamic_snitch=true; dynamic_snitch_badness_threshold=0.1; dynamic_snitch_reset_interval_in_ms=600000; dynamic_snitch_update_interval_in_ms=100; enable_materialized_views=true; enable_sasi_indexes=true; enable_scripted_user_defined_functions=true; enable_transient_replication=false; enable_user_defined_functions=true; enable_user_defined_functions_threads=true; endpoint_snitch=org.apache.cassandra.locator.SimpleSnitch; file_cache_round_up=null; file_cache_size_in_mb=null; full_query_logging_options=FullQueryLoggerOptions{log_dir='', archive_command='', roll_cycle='HOURLY', block=true, max_queue_weight=268435456, max_log_size=17179869184}; gc_log_threshold_in_ms=200; gc_warn_threshold_in_ms=1000; hinted_handoff_disabled_datacenters=[]; hinted_handoff_enabled=true; hinted_handoff_throttle_in_kb=1024; hints_compression=null; hints_directory=build/test/cassandra/hints; hints_flush_period_in_ms=10000; ideal_consistency_level=null; incremental_backups=true; index_summary_capacity_in_mb=null; index_summary_resize_interval_in_minutes=60; initial_token=null; inter_dc_stream_throughput_outbound_megabits_per_sec=200; inter_dc_tcp_nodelay=true; internode_application_receive_queue_capacity_in_bytes=4194304; internode_application_receive_queue_reserve_endpoint_capacity_in_bytes=134217728; internode_application_receive_queue_reserve_global_capacity_in_bytes=536870912; internode_application_send_queue_capacity_in_bytes=4194304; internode_application_send_queue_reserve_endpoint_capacity_in_bytes=134217728; internode_application_send_queue_reserve_global_capacity_in_bytes=536870912; internode_authenticator=null; internode_compression=none; internode_max_message_size_in_bytes=null; internode_socket_receive_buffer_size_in_bytes=0; internode_socket_send_buffer_size_in_bytes=0; internode_tcp_connect_timeout_in_ms=2000; internode_tcp_user_timeout_in_ms=30000; key_cache_keys_to_save=2147483647; key_cache_migrate_during_compaction=true; key_cache_save_period=14400; key_cache_size_in_mb=null; listen_address=127.0.0.1; listen_interface=null; listen_interface_prefer_ipv6=false; listen_on_broadcast_address=false; max_concurrent_automatic_sstable_upgrades=1; max_hint_window_in_ms=10800000; max_hints_delivery_threads=2; max_hints_file_size_in_mb=128; max_mutation_size_in_kb=null; max_streaming_retries=3; max_value_size_in_mb=256; memtable_allocation_type=offheap_objects; memtable_cleanup_threshold=null; memtable_flush_writers=0; memtable_heap_space_in_mb=null; memtable_offheap_space_in_mb=null; min_free_space_per_drive_in_mb=50; native_transport_allow_older_protocols=true; native_transport_flush_in_batches_legacy=false; native_transport_frame_block_size_in_kb=32; native_transport_idle_timeout_in_ms=0; native_transport_max_concurrent_connections=-1; native_transport_max_concurrent_connections_per_ip=-1; native_transport_max_concurrent_requests_in_bytes=-1; native_transport_max_concurrent_requests_in_bytes_per_ip=-1; native_transport_max_frame_size_in_mb=256; native_transport_max_negotiable_protocol_version=null; native_transport_max_threads=128; native_transport_port=9042; native_transport_port_ssl=null; network_authorizer=null; num_tokens=1; otc_coalescing_enough_coalesced_messages=8; otc_coalescing_strategy=DISABLED; otc_coalescing_window_us=200; partitioner=org.apache.cassandra.dht.ByteOrderedPartitioner; periodic_commitlog_sync_lag_block_in_ms=null; permissions_cache_max_entries=1000; permissions_update_interval_in_ms=-1; permissions_validity_in_ms=2000; phi_convict_threshold=8.0; prepared_statements_cache_size_mb=1; range_request_timeout_in_ms=10000; read_request_timeout_in_ms=5000; repair_command_pool_full_strategy=queue; repair_command_pool_size=2147483647; repair_session_max_tree_depth=null; repair_session_space_in_mb=null; repaired_data_tracking_for_partition_reads_enabled=false; repaired_data_tracking_for_range_reads_enabled=false; report_unconfirmed_repaired_data_mismatches=false; request_timeout_in_ms=10000; role_manager=null; roles_cache_max_entries=1000; roles_update_interval_in_ms=-1; roles_validity_in_ms=2000; row_cache_class_name=org.apache.cassandra.cache.OHCProvider; row_cache_keys_to_save=2147483647; row_cache_save_period=0; row_cache_size_in_mb=16; rpc_address=null; rpc_interface=null; rpc_interface_prefer_ipv6=false; rpc_keepalive=true; saved_caches_directory=build/test/cassandra/saved_caches; seed_provider=org.apache.cassandra.locator.SimpleSeedProvider{seeds=127.0.0.1:7012}; server_encryption_options=<REDACTED>; slow_query_log_timeout_in_ms=500; snapshot_before_compaction=false; ssl_storage_port=7011; sstable_preemptive_open_interval_in_mb=50; start_native_transport=true; storage_port=7012; stream_entire_sstables=true; stream_throughput_outbound_megabits_per_sec=200000000; streaming_connections_per_host=1; streaming_keep_alive_period_in_secs=300; tombstone_failure_threshold=100000; tombstone_warn_threshold=1000; tracetype_query_ttl=86400; tracetype_repair_ttl=604800; transparent_data_encryption_options=org.apache.cassandra.config.TransparentDataEncryptionOptions@654f0d9c; trickle_fsync=false; trickle_fsync_interval_in_kb=10240; truncate_request_timeout_in_ms=60000; unlogged_batch_across_partitions_warn_threshold=10; use_offheap_merkle_trees=true; user_defined_function_fail_timeout=1500; user_defined_function_warn_timeout=500; user_function_timeout_policy=die; windows_timer_interval=0; write_request_timeout_in_ms=2000]
+DEBUG [main] 2020-01-14 18:11:01,038 Syncing log with batch mode
+INFO  [main] 2020-01-14 18:11:01,038 DiskAccessMode is mmap, indexAccessMode is mmap
+INFO  [main] 2020-01-14 18:11:01,039 Global memtable on-heap threshold is enabled at 213MB
+INFO  [main] 2020-01-14 18:11:01,039 Global memtable off-heap threshold is enabled at 213MB
+INFO  [main] 2020-01-14 18:11:01,450 Initialized back-pressure with high ratio: 0.9, factor: 5, flow: FAST, window size: 2000.
+INFO  [main] 2020-01-14 18:11:01,451 Back-pressure is disabled with strategy null.
+DEBUG [main] 2020-01-14 18:11:01,881 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+DEBUG [main] 2020-01-14 18:11:02,139 Using SLF4J as the default logging framework
+DEBUG [main] 2020-01-14 18:11:02,218 -Dio.netty.noUnsafe: false
+DEBUG [main] 2020-01-14 18:11:02,219 Java version: 8
+DEBUG [main] 2020-01-14 18:11:02,220 sun.misc.Unsafe.theUnsafe: available
+DEBUG [main] 2020-01-14 18:11:02,221 sun.misc.Unsafe.copyMemory: available
+DEBUG [main] 2020-01-14 18:11:02,222 java.nio.Buffer.address: available
+DEBUG [main] 2020-01-14 18:11:02,222 direct buffer constructor: available
+DEBUG [main] 2020-01-14 18:11:02,223 java.nio.Bits.unaligned: available, true
+DEBUG [main] 2020-01-14 18:11:02,223 jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+DEBUG [main] 2020-01-14 18:11:02,223 java.nio.DirectByteBuffer.<init>(long, int): available
+DEBUG [main] 2020-01-14 18:11:02,223 sun.misc.Unsafe: available
+DEBUG [main] 2020-01-14 18:11:02,238 -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+DEBUG [main] 2020-01-14 18:11:02,239 -Dio.netty.bitMode: 64 (sun.arch.data.model)
+DEBUG [main] 2020-01-14 18:11:02,240 -Dio.netty.maxDirectMemory: 897056768 bytes
+DEBUG [main] 2020-01-14 18:11:02,240 -Dio.netty.uninitializedArrayAllocationThreshold: -1
+DEBUG [main] 2020-01-14 18:11:02,242 java.nio.ByteBuffer.cleaner(): available
+DEBUG [main] 2020-01-14 18:11:02,242 -Dio.netty.noPreferDirect: false
+DEBUG [main] 2020-01-14 18:11:02,254 -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
+DEBUG [main] 2020-01-14 18:11:02,254 -Dio.netty.native.deleteLibAfterLoading: true
+DEBUG [main] 2020-01-14 18:11:02,254 -Dio.netty.native.tryPatchShadedId: true
+DEBUG [main] 2020-01-14 18:11:02,258 Unable to load the library 'netty_tcnative_linux_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:568)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:133)
+	at org.apache.cassandra.security.SSLFactory.<clinit>(SSLFactory.java:99)
+	at org.apache.cassandra.config.DatabaseDescriptor.applySslContextHotReload(DatabaseDescriptor.java:970)
+	at org.apache.cassandra.config.DatabaseDescriptor.applyAll(DatabaseDescriptor.java:354)
+	at org.apache.cassandra.config.DatabaseDescriptor.daemonInitialization(DatabaseDescriptor.java:168)
+	at org.apache.cassandra.config.DatabaseDescriptor.daemonInitialization(DatabaseDescriptor.java:152)
+	at org.apache.cassandra.service.CassandraDaemon.applyConfig(CassandraDaemon.java:666)
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:609)
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:733)
+DEBUG [main] 2020-01-14 18:11:02,259 netty_tcnative_linux_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:349)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:568)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:133)
+	at org.apache.cassandra.security.SSLFactory.<clinit>(SSLFactory.java:99)
+	at org.apache.cassandra.config.DatabaseDescriptor.applySslContextHotReload(DatabaseDescriptor.java:970)
+	at org.apache.cassandra.config.DatabaseDescriptor.applyAll(DatabaseDescriptor.java:354)
+	at org.apache.cassandra.config.DatabaseDescriptor.daemonInitialization(DatabaseDescriptor.java:168)
+	at org.apache.cassandra.config.DatabaseDescriptor.daemonInitialization(DatabaseDescriptor.java:152)
+	at org.apache.cassandra.service.CassandraDaemon.applyConfig(CassandraDaemon.java:666)
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:609)
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:733)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_linux_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+		at java.lang.System.loadLibrary(System.java:1122)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 12 common frames omitted
+DEBUG [main] 2020-01-14 18:11:02,360 Successfully loaded the library /tmp/libnetty_tcnative_linux_x86_647847387008429573678.so
+DEBUG [main] 2020-01-14 18:11:02,360 Initialize netty-tcnative using engine: 'default'
+DEBUG [main] 2020-01-14 18:11:02,360 netty-tcnative using native library: BoringSSL
+DEBUG [main] 2020-01-14 18:11:02,507 -Dio.netty.leakDetection.level: simple
+DEBUG [main] 2020-01-14 18:11:02,507 -Dio.netty.leakDetection.targetRecords: 4
+DEBUG [main] 2020-01-14 18:11:02,536 -Dio.netty.buffer.checkAccessible: true
+DEBUG [main] 2020-01-14 18:11:02,536 -Dio.netty.buffer.checkBounds: true
+DEBUG [main] 2020-01-14 18:11:02,539 Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55cf0d14
+DEBUG [main] 2020-01-14 18:11:02,638 -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+DEBUG [main] 2020-01-14 18:11:02,638 -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+DEBUG [main] 2020-01-14 18:11:02,643 -Dio.netty.allocator.numHeapArenas: 8
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.numDirectArenas: 8
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.pageSize: 8192
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.maxOrder: 11
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.chunkSize: 16777216
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.tinyCacheSize: 512
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.smallCacheSize: 256
+DEBUG [main] 2020-01-14 18:11:02,644 -Dio.netty.allocator.normalCacheSize: 64
+DEBUG [main] 2020-01-14 18:11:02,645 -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+DEBUG [main] 2020-01-14 18:11:02,645 -Dio.netty.allocator.cacheTrimInterval: 8192
+DEBUG [main] 2020-01-14 18:11:02,645 -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+DEBUG [main] 2020-01-14 18:11:02,645 -Dio.netty.allocator.useCacheForAllThreads: true
+DEBUG [main] 2020-01-14 18:11:02,645 -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+DEBUG [main] 2020-01-14 18:11:02,669 -Dio.netty.allocator.type: pooled
+DEBUG [main] 2020-01-14 18:11:02,669 -Dio.netty.threadLocalDirectBufferSize: 0
+DEBUG [main] 2020-01-14 18:11:02,669 -Dio.netty.maxThreadLocalCharBufferSize: 16384
+DEBUG [main] 2020-01-14 18:11:02,709 Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6c0d7c83
+DEBUG [main] 2020-01-14 18:11:02,726 -Dio.netty.recycler.maxCapacityPerThread: 4096
+DEBUG [main] 2020-01-14 18:11:02,726 -Dio.netty.recycler.maxSharedCapacityFactor: 2
+DEBUG [main] 2020-01-14 18:11:02,727 -Dio.netty.recycler.linkCapacity: 16
+DEBUG [main] 2020-01-14 18:11:02,727 -Dio.netty.recycler.ratio: 8
+DEBUG [main] 2020-01-14 18:11:02,769 Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,769 Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,770 Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,770 Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,770 Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,770 Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305
+DEBUG [main] 2020-01-14 18:11:02,771 Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,771 Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,771 Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,771 Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,772 Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,772 Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,772 Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,772 Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,773 Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,773 Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,773 Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,773 Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,774 Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,774 Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,774 Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,774 Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,774 Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,775 Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,775 Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,775 Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,775 Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,776 Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256
+DEBUG [main] 2020-01-14 18:11:02,776 Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,776 Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384
+DEBUG [main] 2020-01-14 18:11:02,776 Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,776 Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA
+DEBUG [main] 2020-01-14 18:11:02,777 Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,777 Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,777 Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,777 Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA
+DEBUG [main] 2020-01-14 18:11:02,778 Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,778 Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA
+DEBUG [main] 2020-01-14 18:11:02,778 Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+DEBUG [main] 2020-01-14 18:11:02,778 Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA
+DEBUG [main] 2020-01-14 18:11:02,779 Supported protocols (OpenSSL): [SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2, TLSv1.3] 
+DEBUG [main] 2020-01-14 18:11:02,779 Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+DEBUG [main] 2020-01-14 18:11:02,779 Initializing hot reloading SSLContext
+INFO  [main] 2020-01-14 18:11:03,003 Hostname: user-OptiPlex-390:7012:7011
+INFO  [main] 2020-01-14 18:11:03,004 JVM vendor/version: Java HotSpot(TM) 64-Bit Server VM/1.8.0_191
+INFO  [main] 2020-01-14 18:11:03,029 Heap size: 59.500MiB/855.500MiB
+INFO  [main] 2020-01-14 18:11:03,030 Code Cache Non-heap memory: init = 2555904(2496K) used = 4086848(3991K) committed = 4128768(4032K) max = 251658240(245760K)
+INFO  [main] 2020-01-14 18:11:03,030 Metaspace Non-heap memory: init = 0(0K) used = 21191968(20695K) committed = 21807104(21296K) max = -1(-1K)
+INFO  [main] 2020-01-14 18:11:03,030 Compressed Class Space Non-heap memory: init = 0(0K) used = 3339864(3261K) committed = 3538944(3456K) max = 1073741824(1048576K)
+INFO  [main] 2020-01-14 18:11:03,030 PS Eden Space Heap memory: init = 16252928(15872K) used = 16252928(15872K) committed = 16252928(15872K) max = 330825728(323072K)
+INFO  [main] 2020-01-14 18:11:03,030 PS Survivor Space Heap memory: init = 2621440(2560K) used = 2620648(2559K) committed = 2621440(2560K) max = 2621440(2560K)
+INFO  [main] 2020-01-14 18:11:03,030 PS Old Gen Heap memory: init = 43515904(42496K) used = 6531032(6377K) committed = 43515904(42496K) max = 672661504(656896K)
+INFO  [main] 2020-01-14 18:11:03,031 Classpath: /home/user/cassandra-trunk/build/test/classes:/home/user/cassandra-trunk/build/test/stress-classes:/home/user/cassandra-trunk/build/test/fqltool-classes:/home/user/cassandra-trunk/build/classes/eclipse:/home/user/cassandra-trunk/test/conf:/usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar:/home/user/cassandra-trunk/lib/HdrHistogram-2.1.9.jar:/home/user/cassandra-trunk/lib/ST4-4.0.8.jar:/home/user/cassandra-trunk/lib/airline-0.8.jar:/home/user/cassandra-trunk/lib/antlr-runtime-3.5.2.jar:/home/user/cassandra-trunk/lib/asm-7.1.jar:/home/user/cassandra-trunk/lib/caffeine-2.3.5.jar:/home/user/cassandra-trunk/lib/cassandra-driver-core-3.6.0-shaded.jar:/home/user/cassandra-trunk/lib/chronicle-bytes-1.16.3.jar:/home/user/cassandra-trunk/lib/chronicle-core-1.16.4.jar:/home/user/cassandra-trunk/lib/chronicle-wire-1.16.1.jar:/home/user/cassandra-trunk/lib/chronicle-threads-1.16.0.jar:/home/user/cassandra-trunk/lib/slf4j-api-1.7.25.jar:/home/user/cassandra-trunk/lib/chronicle-queue-4.16.3.jar:/home/user/cassandra-trunk/lib/commons-cli-1.1.jar:/home/user/cassandra-trunk/lib/commons-codec-1.9.jar:/home/user/cassandra-trunk/lib/commons-lang3-3.1.jar:/home/user/cassandra-trunk/lib/commons-math3-3.2.jar:/home/user/cassandra-trunk/lib/concurrent-trees-2.4.0.jar:/home/user/cassandra-trunk/lib/ecj-4.6.1.jar:/home/user/cassandra-trunk/lib/guava-27.0-jre.jar:/home/user/cassandra-trunk/lib/high-scale-lib-1.0.6.jar:/home/user/cassandra-trunk/lib/hppc-0.5.4.jar:/home/user/cassandra-trunk/lib/j2objc-annotations-1.3.jar:/home/user/cassandra-trunk/lib/jackson-annotations-2.9.5.jar:/home/user/cassandra-trunk/lib/jackson-core-2.9.5.jar:/home/user/cassandra-trunk/lib/jackson-databind-2.9.5.jar:/home/user/cassandra-trunk/lib/jamm-0.3.2.jar:/home/user/cassandra-trunk/lib/javax.inject.jar:/home/user/cassandra-trunk/lib/jbcrypt-0.3m.jar:/home/user/cassandra-trunk/lib/jcl-over-slf4j-1.7.25.jar:/home/user/cassandra-trunk/lib/jctools-core-1.2.1.jar:/home/user/cassandra-trunk/lib/jflex-1.6.0.jar:/home/user/cassandra-trunk/lib/jna-4.2.2.jar:/home/user/cassandra-trunk/lib/joda-time-2.4.jar:/home/user/cassandra-trunk/lib/json-simple-1.1.jar:/home/user/cassandra-trunk/lib/jstackjunit-0.0.1.jar:/home/user/cassandra-trunk/lib/log4j-over-slf4j-1.7.25.jar:/home/user/cassandra-trunk/lib/logback-classic-1.2.3.jar:/home/user/cassandra-trunk/lib/logback-core-1.2.3.jar:/home/user/cassandra-trunk/lib/lz4-java-1.4.0.jar:/home/user/cassandra-trunk/lib/metrics-core-3.1.5.jar:/home/user/cassandra-trunk/lib/metrics-jvm-3.1.5.jar:/home/user/cassandra-trunk/lib/metrics-logback-3.1.5.jar:/home/user/cassandra-trunk/lib/netty-all-4.1.37.Final.jar:/home/user/cassandra-trunk/lib/netty-tcnative-boringssl-static-2.0.25.Final.jar:/home/user/cassandra-trunk/lib/ohc-core-0.5.1.jar:/home/user/cassandra-trunk/lib/ohc-core-j8-0.5.1.jar:/home/user/cassandra-trunk/lib/psjava-0.1.19.jar:/home/user/cassandra-trunk/lib/reporter-config-base-3.0.3.jar:/home/user/cassandra-trunk/lib/reporter-config3-3.0.3.jar:/home/user/cassandra-trunk/lib/sigar-1.6.4.jar:/home/user/cassandra-trunk/lib/snakeyaml-1.11.jar:/home/user/cassandra-trunk/lib/snappy-java-1.1.2.6.jar:/home/user/cassandra-trunk/lib/snowball-stemmer-1.3.0.581.1.jar:/home/user/cassandra-trunk/lib/stream-2.5.2.jar:/home/user/cassandra-trunk/lib/zstd-jni-1.3.8-5.jar:/home/user/cassandra-trunk/build/lib/jars/ST4-4.0.8.jar:/home/user/cassandra-trunk/build/lib/jars/ant-1.9.7.jar:/home/user/cassandra-trunk/build/lib/jars/ant-junit-1.9.7.jar:/home/user/cassandra-trunk/build/lib/jars/ant-launcher-1.9.7.jar:/home/user/cassandra-trunk/build/lib/jars/antlr-3.5.2.jar:/home/user/cassandra-trunk/build/lib/jars/antlr-runtime-3.5.2.jar:/home/user/cassandra-trunk/build/lib/jars/apache-rat-0.10.jar:/home/user/cassandra-trunk/build/lib/jars/apache-rat-core-0.10.jar:/home/user/cassandra-trunk/build/lib/jars/apache-rat-tasks-0.10.jar:/home/user/cassandra-trunk/build/lib/jars/byteman-4.0.6.jar:/home/user/cassandra-trunk/build/lib/jars/byteman-bmunit-4.0.6.jar:/home/user/cassandra-trunk/build/lib/jars/byteman-install-4.0.6.jar:/home/user/cassandra-trunk/build/lib/jars/byteman-submit-4.0.6.jar:/home/user/cassandra-trunk/build/lib/jars/cassandra-driver-core-3.6.0-shaded.jar:/home/user/cassandra-trunk/build/lib/jars/commons-beanutils-1.7.0.jar:/home/user/cassandra-trunk/build/lib/jars/commons-beanutils-core-1.8.0.jar:/home/user/cassandra-trunk/build/lib/jars/commons-cli-1.2.jar:/home/user/cassandra-trunk/build/lib/jars/commons-codec-1.4.jar:/home/user/cassandra-trunk/build/lib/jars/commons-collections-3.2.1.jar:/home/user/cassandra-trunk/build/lib/jars/commons-compress-1.5.jar:/home/user/cassandra-trunk/build/lib/jars/commons-configuration-1.6.jar:/home/user/cassandra-trunk/build/lib/jars/commons-digester-1.8.jar:/home/user/cassandra-trunk/build/lib/jars/commons-el-1.0.jar:/home/user/cassandra-trunk/build/lib/jars/commons-httpclient-3.0.1.jar:/home/user/cassandra-trunk/build/lib/jars/commons-io-2.2.jar:/home/user/cassandra-trunk/build/lib/jars/commons-lang-2.4.jar:/home/user/cassandra-trunk/build/lib/jars/commons-math-2.1.jar:/home/user/cassandra-trunk/build/lib/jars/commons-math3-3.2.jar:/home/user/cassandra-trunk/build/lib/jars/commons-net-1.4.1.jar:/home/user/cassandra-trunk/build/lib/jars/compile-command-annotations-1.2.0.jar:/home/user/cassandra-trunk/build/lib/jars/ecj-4.6.1.jar:/home/user/cassandra-trunk/build/lib/jars/ftplet-api-1.0.0.jar:/home/user/cassandra-trunk/build/lib/jars/ftpserver-core-1.0.0.jar:/home/user/cassandra-trunk/build/lib/jars/ftpserver-deprecated-1.0.0-M2.jar:/home/user/cassandra-trunk/build/lib/jars/guava-19.0.jar:/home/user/cassandra-trunk/build/lib/jars/hadoop-core-1.0.3.jar:/home/user/cassandra-trunk/build/lib/jars/hadoop-minicluster-1.0.3.jar:/home/user/cassandra-trunk/build/lib/jars/hadoop-test-1.0.3.jar:/home/user/cassandra-trunk/build/lib/jars/hamcrest-core-1.3.jar:/home/user/cassandra-trunk/build/lib/jars/hsqldb-1.8.0.10.jar:/home/user/cassandra-trunk/build/lib/jars/jackson-core-asl-1.0.1.jar:/home/user/cassandra-trunk/build/lib/jars/jackson-mapper-asl-1.0.1.jar:/home/user/cassandra-trunk/build/lib/jars/jacocoagent.jar:/home/user/cassandra-trunk/build/lib/jars/jasper-compiler-5.5.12.jar:/home/user/cassandra-trunk/build/lib/jars/jasper-runtime-5.5.12.jar:/home/user/cassandra-trunk/build/lib/jars/jersey-core-1.0.jar:/home/user/cassandra-trunk/build/lib/jars/jersey-server-1.0.jar:/home/user/cassandra-trunk/build/lib/jars/jets3t-0.7.1.jar:/home/user/cassandra-trunk/build/lib/jars/jetty-6.1.26.jar:/home/user/cassandra-trunk/build/lib/jars/jetty-util-6.1.26.jar:/home/user/cassandra-trunk/build/lib/jars/jffi-1.2.16-native.jar:/home/user/cassandra-trunk/build/lib/jars/jffi-1.2.16.jar:/home/user/cassandra-trunk/build/lib/jars/jmh-core-1.21.jar:/home/user/cassandra-trunk/build/lib/jars/jmh-generator-annprocess-1.21.jar:/home/user/cassandra-trunk/build/lib/jars/jna-4.1.0.jar:/home/user/cassandra-trunk/build/lib/jars/jnr-constants-0.9.9.jar:/home/user/cassandra-trunk/build/lib/jars/jnr-ffi-2.1.7.jar:/home/user/cassandra-trunk/build/lib/jars/jnr-posix-3.0.44.jar:/home/user/cassandra-trunk/build/lib/jars/jnr-x86asm-1.0.2.jar:/home/user/cassandra-trunk/build/lib/jars/jopt-simple-4.6.jar:/home/user/cassandra-trunk/build/lib/jars/jsp-2.1-6.1.14.jar:/home/user/cassandra-trunk/build/lib/jars/jsp-api-2.1-6.1.14.jar:/home/user/cassandra-trunk/build/lib/jars/jsr305-2.0.2.jar:/home/user/cassandra-trunk/build/lib/jars/jsr311-api-1.0.jar:/home/user/cassandra-trunk/build/lib/jars/junit-4.12.jar:/home/user/cassandra-trunk/build/lib/jars/kfs-0.3.jar:/home/user/cassandra-trunk/build/lib/jars/metrics-core-3.2.2.jar:/home/user/cassandra-trunk/build/lib/jars/mina-core-2.0.0-M5.jar:/home/user/cassandra-trunk/build/lib/jars/ohc-core-0.5.1.jar:/home/user/cassandra-trunk/build/lib/jars/ohc-core-j8-0.5.1.jar:/home/user/cassandra-trunk/build/lib/jars/org.jacoco.agent-0.7.5.201505241946.jar:/home/user/cassandra-trunk/build/lib/jars/org.jacoco.ant-0.7.5.201505241946.jar:/home/user/cassandra-trunk/build/lib/jars/org.jacoco.core-0.7.5.201505241946.jar:/home/user/cassandra-trunk/build/lib/jars/org.jacoco.report-0.7.5.201505241946.jar:/home/user/cassandra-trunk/build/lib/jars/oro-2.0.8.jar:/home/user/cassandra-trunk/build/lib/jars/psjava-0.1.19.jar:/home/user/cassandra-trunk/build/lib/jars/quicktheories-0.25.jar:/home/user/cassandra-trunk/build/lib/jars/servlet-api-2.5-6.1.14.jar:/home/user/cassandra-trunk/build/lib/jars/xmlenc-0.52.jar
+INFO  [main] 2020-01-14 18:11:03,031 JVM Arguments: [-Dfile.encoding=UTF-8]
+WARN  [main] 2020-01-14 18:11:03,548 Unable to lock JVM memory (ENOMEM). This can result in part of the JVM being swapped out, especially with mmapped I/O enabled. Increase RLIMIT_MEMLOCK or run Cassandra as root.
+WARN  [main] 2020-01-14 18:11:03,548 jemalloc shared library could not be preloaded to speed up memory allocations
+WARN  [main] 2020-01-14 18:11:03,548 JMX is not enabled to receive remote connections. Please see cassandra-env.sh for more info.
+ERROR [main] 2020-01-14 18:11:03,548 cassandra.jmx.local.port missing from cassandra-env.sh, unable to start local JMX service.
+WARN  [main] 2020-01-14 18:11:03,565 The JVM is not configured to stop on OutOfMemoryError which can cause data corruption. Use one of the following JVM options to configure the behavior on OutOfMemoryError:  -XX:+ExitOnOutOfMemoryError, -XX:+CrashOnOutOfMemoryError, or -XX:OnOutOfMemoryError="<cmd args>;<cmd args>"
+INFO  [main] 2020-01-14 18:11:03,570 Initializing SIGAR library
+DEBUG [main] 2020-01-14 18:11:03,606 no libsigar-amd64-linux.so in java.library.path
+org.hyperic.sigar.SigarException: no libsigar-amd64-linux.so in java.library.path
+	at org.hyperic.sigar.Sigar.loadLibrary(Sigar.java:172)
+	at org.hyperic.sigar.Sigar.<clinit>(Sigar.java:100)
+	at org.apache.cassandra.utils.SigarLibrary.<init>(SigarLibrary.java:47)
+	at org.apache.cassandra.utils.SigarLibrary.<clinit>(SigarLibrary.java:28)
+	at org.apache.cassandra.service.StartupChecks$7.execute(StartupChecks.java:265)
+	at org.apache.cassandra.service.StartupChecks.verify(StartupChecks.java:124)
+	at org.apache.cassandra.service.CassandraDaemon.setup(CassandraDaemon.java:202)
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:620)
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:733)
+INFO  [main] 2020-01-14 18:11:03,608 Could not initialize SIGAR library org.hyperic.sigar.Sigar.getFileSystemListNative()[Lorg/hyperic/sigar/FileSystem; 
+INFO  [main] 2020-01-14 18:11:03,608 Sigar could not be initialized, test for checking degraded mode omitted.
+DEBUG [main] 2020-01-14 18:11:03,662 Checking directory build/test/cassandra/data
+WARN  [main] 2020-01-14 18:11:03,663 Directory build/test/cassandra/data doesn't exist
+DEBUG [main] 2020-01-14 18:11:03,684 Checking directory build/test/cassandra/commitlog
+WARN  [main] 2020-01-14 18:11:03,684 Directory build/test/cassandra/commitlog doesn't exist
+DEBUG [main] 2020-01-14 18:11:03,684 Checking directory build/test/cassandra/saved_caches
+WARN  [main] 2020-01-14 18:11:03,684 Directory build/test/cassandra/saved_caches doesn't exist
+DEBUG [main] 2020-01-14 18:11:03,684 Checking directory /home/user/cassandra-trunk/build/test/cassandra/hints
+WARN  [main] 2020-01-14 18:11:03,684 Directory /home/user/cassandra-trunk/build/test/cassandra/hints doesn't exist
+INFO  [main] 2020-01-14 18:11:05,460 Creating replication strategy system params KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.LocalStrategy}}
+DEBUG [main] 2020-01-14 18:11:05,692 New replication settings for keyspace system - invalidating disk boundary caches
+INFO  [main] 2020-01-14 18:11:05,878 Scheduling approximate time conversion task with an interval of 10000 milliseconds
+INFO  [main] 2020-01-14 18:11:05,880 Scheduling approximate time-check task with a precision of 2 milliseconds
+INFO  [main] 2020-01-14 18:11:05,955 Initializing system.IndexInfo
+INFO  [main] 2020-01-14 18:11:07,334 Initializing system.batches
+INFO  [main] 2020-01-14 18:11:07,351 Initializing system.paxos
+INFO  [main] 2020-01-14 18:11:07,376 Initializing system.local
+INFO  [main] 2020-01-14 18:11:07,386 Initializing system.peers_v2
+INFO  [main] 2020-01-14 18:11:07,395 Initializing system.peers
+INFO  [main] 2020-01-14 18:11:07,417 Initializing system.peer_events_v2
+INFO  [main] 2020-01-14 18:11:07,427 Initializing system.peer_events
+INFO  [main] 2020-01-14 18:11:07,438 Initializing system.compaction_history
+INFO  [main] 2020-01-14 18:11:07,459 Initializing system.sstable_activity
+INFO  [main] 2020-01-14 18:11:07,470 Initializing system.size_estimates
+INFO  [main] 2020-01-14 18:11:07,483 Initializing system.available_ranges_v2
+INFO  [main] 2020-01-14 18:11:07,493 Initializing system.available_ranges
+INFO  [main] 2020-01-14 18:11:07,505 Initializing system.transferred_ranges_v2
+INFO  [main] 2020-01-14 18:11:07,515 Initializing system.transferred_ranges
+INFO  [main] 2020-01-14 18:11:07,533 Initializing system.view_builds_in_progress
+INFO  [main] 2020-01-14 18:11:07,543 Initializing system.built_views
+INFO  [main] 2020-01-14 18:11:07,553 Initializing system.prepared_statements
+INFO  [main] 2020-01-14 18:11:07,565 Initializing system.repairs
+INFO  [main] 2020-01-14 18:11:07,608 Initialized prepared statement caches with 1 MB
+INFO  [main] 2020-01-14 18:11:08,153 Creating replication strategy system_schema params KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.LocalStrategy}}
+DEBUG [main] 2020-01-14 18:11:08,153 New replication settings for keyspace system_schema - invalidating disk boundary caches
+INFO  [main] 2020-01-14 18:11:08,163 Initializing system_schema.keyspaces
+INFO  [main] 2020-01-14 18:11:08,170 Initializing system_schema.tables
+INFO  [main] 2020-01-14 18:11:08,281 Initializing system_schema.columns
+INFO  [main] 2020-01-14 18:11:08,296 Initializing system_schema.triggers
+INFO  [main] 2020-01-14 18:11:08,307 Initializing system_schema.dropped_columns
+INFO  [main] 2020-01-14 18:11:08,313 Initializing system_schema.views
+INFO  [main] 2020-01-14 18:11:08,320 Initializing system_schema.types
+INFO  [main] 2020-01-14 18:11:08,326 Initializing system_schema.functions
+INFO  [main] 2020-01-14 18:11:08,333 Initializing system_schema.aggregates
+INFO  [main] 2020-01-14 18:11:08,339 Initializing system_schema.indexes
+INFO  [main] 2020-01-14 18:11:08,727 system.peers_v2 table was empty, migrating legacy system.peers, if this fails you should fix the issue and then truncate system.peers_v2 to have it try again.
+INFO  [main] 2020-01-14 18:11:08,779 Migrating rows from legacy system.peers to system.peers_v2
+INFO  [main] 2020-01-14 18:11:08,795 Migrated 0 rows from legacy system.peers to system.peers_v2
+INFO  [main] 2020-01-14 18:11:08,795 system.peer_events_v2 table was empty, migrating legacy system.peer_events to system.peer_events_v2
+INFO  [main] 2020-01-14 18:11:08,796 Migrated 0 rows from legacy system.peer_events to system.peer_events_v2
+INFO  [main] 2020-01-14 18:11:08,796 system.transferred_ranges_v2 table was empty, migrating legacy system.transferred_ranges to system.transferred_ranges_v2
+INFO  [main] 2020-01-14 18:11:08,807 Migrated 0 rows from legacy system.transferred_ranges to system.transferred_ranges_v2
+INFO  [main] 2020-01-14 18:11:08,807 system.available_ranges_v2 table was empty, migrating legacy system.available_ranges to system.available_ranges_v2
+INFO  [main] 2020-01-14 18:11:08,809 Migrated 0 rows from legacy system.available_ranges to system.available_ranges_v2
+INFO  [main] 2020-01-14 18:11:08,809 Populating token metadata from system tables
+DEBUG [main] 2020-01-14 18:11:08,852 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:08,882 Token metadata: 
+DEBUG [main] 2020-01-14 18:11:09,050 opening keyspace system_schema
+DEBUG [main] 2020-01-14 18:11:09,051 opening keyspace system
+INFO  [main] 2020-01-14 18:11:09,084 Initializing key cache with capacity of 2 MBs.
+INFO  [main] 2020-01-14 18:11:09,134 Initializing row cache with capacity of 16 MBs
+INFO  [main] 2020-01-14 18:11:09,173 OHC using Java8 Unsafe API
+INFO  [main] 2020-01-14 18:11:09,174 OHC using JNA OS native malloc/free
+DEBUG [main] 2020-01-14 18:11:09,175 OHC linked instance with 8 segments and capacity of 16777216 created.
+INFO  [main] 2020-01-14 18:11:09,176 Initializing counter cache with capacity of 1 MBs
+INFO  [main] 2020-01-14 18:11:09,178 Scheduling counter cache save to every 7200 seconds (going to save all keys).
+INFO  [main] 2020-01-14 18:11:09,265 No commitlog files found; skipping replay
+INFO  [main] 2020-01-14 18:11:09,265 Populating token metadata from system tables
+DEBUG [main] 2020-01-14 18:11:09,270 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:09,275 Token metadata: 
+INFO  [main] 2020-01-14 18:11:10,010 Preloaded 0 prepared statements
+INFO  [main] 2020-01-14 18:11:10,011 Cassandra version: 4.0-alpha2-SNAPSHOT
+INFO  [main] 2020-01-14 18:11:10,011 CQL version: 3.4.5
+INFO  [main] 2020-01-14 18:11:10,012 Native protocol supported versions: 3/v3, 4/v4, 5/v5-beta (default: 4/v4)
+INFO  [main] 2020-01-14 18:11:10,197 Initializing index summary manager with a memory pool size of 2 MB and a resize interval of 60 minutes
+DEBUG [main] 2020-01-14 18:11:10,306 Unable to load the library 'netty_transport_native_epoll_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:186)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at org.apache.cassandra.service.NativeTransportService.useEpoll(NativeTransportService.java:148)
+	at org.apache.cassandra.net.SocketFactory$Provider.optimalProvider(SocketFactory.java:163)
+	at org.apache.cassandra.net.SocketFactory.<init>(SocketFactory.java:184)
+	at org.apache.cassandra.net.MessagingService.<init>(MessagingService.java:229)
+	at org.apache.cassandra.net.MessagingService$MSHandle.<clinit>(MessagingService.java:221)
+	at org.apache.cassandra.net.MessagingService.instance(MessagingService.java:226)
+	at org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java:768)
+	at org.apache.cassandra.service.StorageService.initServer(StorageService.java:655)
+	at org.apache.cassandra.service.StorageService.initServer(StorageService.java:606)
+	at org.apache.cassandra.service.CassandraDaemon.setup(CassandraDaemon.java:390)
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:620)
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:733)
+DEBUG [main] 2020-01-14 18:11:10,307 netty_transport_native_epoll_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:349)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:186)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at org.apache.cassandra.service.NativeTransportService.useEpoll(NativeTransportService.java:148)
+	at org.apache.cassandra.net.SocketFactory$Provider.optimalProvider(SocketFactory.java:163)
+	at org.apache.cassandra.net.SocketFactory.<init>(SocketFactory.java:184)
+	at org.apache.cassandra.net.MessagingService.<init>(MessagingService.java:229)
+	at org.apache.cassandra.net.MessagingService$MSHandle.<clinit>(MessagingService.java:221)
+	at org.apache.cassandra.net.MessagingService.instance(MessagingService.java:226)
+	at org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java:768)
+	at org.apache.cassandra.service.StorageService.initServer(StorageService.java:655)
+	at org.apache.cassandra.service.StorageService.initServer(StorageService.java:606)
+	at org.apache.cassandra.service.CassandraDaemon.setup(CassandraDaemon.java:390)
+	at org.apache.cassandra.service.CassandraDaemon.activate(CassandraDaemon.java:620)
+	at org.apache.cassandra.service.CassandraDaemon.main(CassandraDaemon.java:733)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1867)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+		at java.lang.System.loadLibrary(System.java:1122)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 16 common frames omitted
+DEBUG [main] 2020-01-14 18:11:10,358 Successfully loaded the library /tmp/libnetty_transport_native_epoll_x86_644254138187166399775.so
+DEBUG [main] 2020-01-14 18:11:10,362 -Djava.net.preferIPv4Stack: false
+DEBUG [main] 2020-01-14 18:11:10,362 -Djava.net.preferIPv6Addresses: false
+DEBUG [main] 2020-01-14 18:11:10,364 Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+DEBUG [main] 2020-01-14 18:11:10,367 /proc/sys/net/core/somaxconn: 128
+DEBUG [main] 2020-01-14 18:11:10,367 using netty EPOLL event loop for pool prefix Messaging-AcceptLoop
+DEBUG [main] 2020-01-14 18:11:10,383 -Dio.netty.eventLoopThreads: 8
+DEBUG [main] 2020-01-14 18:11:10,456 using netty EPOLL event loop for pool prefix Messaging-EventLoop
+DEBUG [main] 2020-01-14 18:11:10,456 using netty EPOLL event loop for pool prefix Streaming-EventLoop
+INFO  [main] 2020-01-14 18:11:10,569 Listening on address: (127.0.0.1:7012), nic: lo, encryption: enabled (openssl)
+DEBUG [main] 2020-01-14 18:11:10,639 -Dio.netty.processId: 5869 (auto-detected)
+DEBUG [main] 2020-01-14 18:11:10,641 -Dio.netty.machineId: 78:45:c4:ff:fe:0d:fb:d0 (auto-detected)
+WARN  [main] 2020-01-14 18:11:10,713 No host ID found, created 0c6f85de-305d-439b-94e7-54fc5cb1f709 (Note: This should happen exactly once per node).
+DEBUG [main] 2020-01-14 18:11:10,740 Starting shadow gossip round to check for endpoint collision
+DEBUG [main] 2020-01-14 18:11:10,740 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+DEBUG [main] 2020-01-14 18:11:10,746 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:10,752 Unable to gossip with any peers but continuing anyway since node is in its own seed list
+DEBUG [main] 2020-01-14 18:11:10,753 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+DEBUG [main] 2020-01-14 18:11:10,760 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:10,806 Loading persisted ring state
+INFO  [main] 2020-01-14 18:11:10,806 Starting up server gossip
+DEBUG [main] 2020-01-14 18:11:10,835 Enqueuing flush of local: 0.668KiB (0%) on-heap, 1.780KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:11,591 Writing Memtable-local@1876789307(0.435KiB serialized bytes, 4 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:11,628 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-1-big-Data.db (0.229KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=30415)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:12,233 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-1-big-Data.db')] (1 sstables, 5.801KiB), biggest 5.801KiB, smallest 5.801KiB
+DEBUG [main] 2020-01-14 18:11:12,235 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:12,495 Global buffer pool is enabled, when pool is exhausted (max is 213.000MiB) it will allocate on heap
+DEBUG [main] 2020-01-14 18:11:12,518 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+DEBUG [main] 2020-01-14 18:11:12,523 Bootstrap variables: true false false true
+DEBUG [main] 2020-01-14 18:11:12,524 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+INFO  [main] 2020-01-14 18:11:12,528 This node will not auto bootstrap because it is configured to be a seed node.
+DEBUG [main] 2020-01-14 18:11:12,529 Loading settings from file:/home/user/cassandra-trunk/test/conf/cassandra.yaml
+WARN  [main] 2020-01-14 18:11:12,537 Picking random token for a single vnode.  You should probably add more vnodes and/or use the automatic token allocation mechanism.
+INFO  [main] 2020-01-14 18:11:12,537 Generated random tokens. tokens are [d6daf0b37e48392cc24cc6ef731951c4]
+INFO  [main] 2020-01-14 18:11:12,577 Create new Keyspace: KeyspaceMetadata{name=system_traces, kind=REGULAR, params=KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=2}}, tables=[system_traces.sessions, system_traces.events], views=[], functions=[], types=[]}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:12,751 Enqueuing flush of columns: 48.988KiB (0%) on-heap, 36.997KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:12,891 Writing Memtable-columns@1565337439(34.121KiB serialized bytes, 227 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:12,927 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-1-big-Data.db (16.925KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:13,170 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-1-big-Data.db')] (1 sstables, 10.914KiB), biggest 10.914KiB, smallest 10.914KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:13,172 Enqueuing flush of dropped_columns: 0.445KiB (0%) on-heap, 0.134KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:13,351 Writing Memtable-dropped_columns@639236264(0.120KiB serialized bytes, 3 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:13,352 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/dropped_columns-5e7583b5f3f43af19a39b7e1d6f5f11f/na-1-big-Data.db (0.097KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:13,622 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/dropped_columns-5e7583b5f3f43af19a39b7e1d6f5f11f/na-1-big-Data.db')] (1 sstables, 5.130KiB), biggest 5.130KiB, smallest 5.130KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:13,623 Enqueuing flush of triggers: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:13,732 Writing Memtable-triggers@1471499311(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:13,733 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/triggers-4df70b666b05325195a132b54005fd48/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:13,999 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/triggers-4df70b666b05325195a132b54005fd48/na-1-big-Data.db')] (1 sstables, 4.888KiB), biggest 4.888KiB, smallest 4.888KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:14,000 Enqueuing flush of types: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:14,112 Writing Memtable-types@1604583138(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:14,113 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/types-5a8b1ca866023f77a0459273d308917a/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:14,917 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/types-5a8b1ca866023f77a0459273d308917a/na-1-big-Data.db')] (1 sstables, 4.848KiB), biggest 4.848KiB, smallest 4.848KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:14,918 Enqueuing flush of functions: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:15,067 Writing Memtable-functions@314034365(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:15,068 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/functions-96489b7980be3e14a70166a0b9159450/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:15,356 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/functions-96489b7980be3e14a70166a0b9159450/na-1-big-Data.db')] (1 sstables, 4.972KiB), biggest 4.972KiB, smallest 4.972KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:15,357 Enqueuing flush of aggregates: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:15,555 Writing Memtable-aggregates@1077705240(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:15,556 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/aggregates-924c55872e3a345bb10c12f37c1ba895/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:15,881 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/aggregates-924c55872e3a345bb10c12f37c1ba895/na-1-big-Data.db')] (1 sstables, 4.972KiB), biggest 4.972KiB, smallest 4.972KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:15,883 Enqueuing flush of indexes: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:15,992 Writing Memtable-indexes@645161579(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:15,993 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/indexes-0feb57ac311f382fba6d9024d305702f/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:16,238 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/indexes-0feb57ac311f382fba6d9024d305702f/na-1-big-Data.db')] (1 sstables, 4.888KiB), biggest 4.888KiB, smallest 4.888KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:16,239 Enqueuing flush of tables: 18.996KiB (0%) on-heap, 24.674KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:16,345 Writing Memtable-tables@1145447013(22.202KiB serialized bytes, 33 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:16,353 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-1-big-Data.db (13.700KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:16,604 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-1-big-Data.db')] (1 sstables, 8.772KiB), biggest 8.772KiB, smallest 8.772KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:16,605 Enqueuing flush of views: 0.266KiB (0%) on-heap, 0.026KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:16,715 Writing Memtable-views@602872529(0.016KiB serialized bytes, 2 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:16,716 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/views-9786ac1cdd583201a7cdad556410c985/na-1-big-Data.db (0.048KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:16,972 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/views-9786ac1cdd583201a7cdad556410c985/na-1-big-Data.db')] (1 sstables, 4.848KiB), biggest 4.848KiB, smallest 4.848KiB
+DEBUG [MigrationStage:1] 2020-01-14 18:11:16,974 Enqueuing flush of keyspaces: 0.871KiB (0%) on-heap, 0.381KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:17,078 Writing Memtable-keyspaces@762531581(0.382KiB serialized bytes, 5 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:17,080 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-1-big-Data.db (0.313KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=32948)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:17,330 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-1-big-Data.db')] (1 sstables, 5.207KiB), biggest 5.207KiB, smallest 5.207KiB
+INFO  [MigrationStage:1] 2020-01-14 18:11:17,454 Creating replication strategy system_traces params KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=2}}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:17,454 New replication settings for keyspace system_traces - invalidating disk boundary caches
+INFO  [MigrationStage:1] 2020-01-14 18:11:17,464 Initializing system_traces.events
+INFO  [MigrationStage:1] 2020-01-14 18:11:17,472 Initializing system_traces.sessions
+INFO  [main] 2020-01-14 18:11:17,591 Create new Keyspace: KeyspaceMetadata{name=system_distributed, kind=REGULAR, params=KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=3}}, tables=[system_distributed.repair_history, system_distributed.parent_repair_history, system_distributed.view_build_status], views=[], functions=[], types=[]}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:17,669 Enqueuing flush of columns: 6.395KiB (0%) on-heap, 5.051KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:17,778 Writing Memtable-columns@1590095543(4.669KiB serialized bytes, 29 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:17,780 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-2-big-Data.db (2.286KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=37243)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:18,037 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-2-big-Data.db')] (1 sstables, 6.017KiB), biggest 6.017KiB, smallest 6.017KiB
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,039 forceFlush requested but everything is clean in dropped_columns
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,039 forceFlush requested but everything is clean in triggers
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,040 forceFlush requested but everything is clean in types
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,040 forceFlush requested but everything is clean in functions
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,040 forceFlush requested but everything is clean in aggregates
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,040 forceFlush requested but everything is clean in indexes
+DEBUG [MigrationStage:1] 2020-01-14 18:11:18,041 Enqueuing flush of tables: 1.957KiB (0%) on-heap, 2.394KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:18,145 Writing Memtable-tables@1843913055(2.143KiB serialized bytes, 3 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:18,146 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-2-big-Data.db (1.319KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=37243)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:18,458 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-2-big-Data.db')] (1 sstables, 6.998KiB), biggest 6.998KiB, smallest 6.998KiB
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:18,458 forceFlush requested but everything is clean in views
+DEBUG [MigrationStage:1] 2020-01-14 18:11:18,459 Enqueuing flush of keyspaces: 0.301KiB (0%) on-heap, 0.152KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:18,564 Writing Memtable-keyspaces@1922578418(0.146KiB serialized bytes, 1 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:18,565 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-2-big-Data.db (0.125KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=37243)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:18,817 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-2-big-Data.db')] (1 sstables, 5.127KiB), biggest 5.127KiB, smallest 5.127KiB
+INFO  [MigrationStage:1] 2020-01-14 18:11:18,844 Creating replication strategy system_distributed params KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=3}}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:18,845 New replication settings for keyspace system_distributed - invalidating disk boundary caches
+INFO  [MigrationStage:1] 2020-01-14 18:11:18,855 Initializing system_distributed.parent_repair_history
+INFO  [MigrationStage:1] 2020-01-14 18:11:18,864 Initializing system_distributed.repair_history
+INFO  [MigrationStage:1] 2020-01-14 18:11:18,874 Initializing system_distributed.view_build_status
+INFO  [main] 2020-01-14 18:11:18,909 JOINING: Finish joining ring
+DEBUG [main] 2020-01-14 18:11:18,924 Enqueuing flush of local: 0.285KiB (0%) on-heap, 0.198KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:19,034 Writing Memtable-local@1311291969(0.084KiB serialized bytes, 4 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:19,034 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-2-big-Data.db (0.058KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=37415)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:19,260 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-2-big-Data.db')] (1 sstables, 4.881KiB), biggest 4.881KiB, smallest 4.881KiB
+DEBUG [main] 2020-01-14 18:11:19,265 Setting tokens to [d6daf0b37e48392cc24cc6ef731951c4]
+DEBUG [main] 2020-01-14 18:11:19,294 Enqueuing flush of local: 0.301KiB (0%) on-heap, 0.068KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:19,481 Writing Memtable-local@2012902640(0.087KiB serialized bytes, 1 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:19,482 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-3-big-Data.db (0.060KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=37520)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:19,710 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system/local-7ad54392bcdd35a684174e047860b377/na-3-big-Data.db')] (1 sstables, 4.879KiB), biggest 4.879KiB, smallest 4.879KiB
+DEBUG [main] 2020-01-14 18:11:19,740 Node 127.0.0.1:7012 state NORMAL, token [d6daf0b37e48392cc24cc6ef731951c4]
+DEBUG [main] 2020-01-14 18:11:19,741 New node 127.0.0.1:7012 at token d6daf0b37e48392cc24cc6ef731951c4
+DEBUG [main] 2020-01-14 18:11:19,767 Node 127.0.0.1:7012 state NORMAL, token [d6daf0b37e48392cc24cc6ef731951c4]
+INFO  [main] 2020-01-14 18:11:19,767 Node 127.0.0.1:7012 state jump to NORMAL
+DEBUG [main] 2020-01-14 18:11:19,768 NORMAL
+INFO  [main] 2020-01-14 18:11:19,775 Create new Keyspace: KeyspaceMetadata{name=system_auth, kind=REGULAR, params=KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=1}}, tables=[system_auth.roles, system_auth.role_members, system_auth.role_permissions, system_auth.resource_role_permissons_index, system_auth.network_permissions], views=[], functions=[], types=[]}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:19,848 Enqueuing flush of columns: 3.168KiB (0%) on-heap, 2.276KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:19,951 Writing Memtable-columns@990440683(2.092KiB serialized bytes, 14 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:19,953 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-3-big-Data.db (0.947KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=41296)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:20,413 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/columns-24101c25a2ae3af787c1b40ee1aca33f/na-3-big-Data.db')] (1 sstables, 5.553KiB), biggest 5.553KiB, smallest 5.553KiB
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,414 forceFlush requested but everything is clean in dropped_columns
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,414 forceFlush requested but everything is clean in triggers
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,414 forceFlush requested but everything is clean in types
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,414 forceFlush requested but everything is clean in functions
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,415 forceFlush requested but everything is clean in aggregates
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,415 forceFlush requested but everything is clean in indexes
+DEBUG [MigrationStage:1] 2020-01-14 18:11:20,415 Enqueuing flush of tables: 3.145KiB (0%) on-heap, 4.021KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:20,521 Writing Memtable-tables@739819852(3.619KiB serialized bytes, 5 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:2] 2020-01-14 18:11:20,522 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-3-big-Data.db (2.225KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=41296)
+DEBUG [MemtableFlushWriter:2] 2020-01-14 18:11:20,800 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/tables-afddfb9dbc1e30688056eed6c302ba09/na-3-big-Data.db')] (1 sstables, 7.112KiB), biggest 7.112KiB, smallest 7.112KiB
+DEBUG [MemtablePostFlush:1] 2020-01-14 18:11:20,800 forceFlush requested but everything is clean in views
+DEBUG [MigrationStage:1] 2020-01-14 18:11:20,801 Enqueuing flush of keyspaces: 0.293KiB (0%) on-heap, 0.146KiB (0%) off-heap
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:20,907 Writing Memtable-keyspaces@205212113(0.146KiB serialized bytes, 1 ops, 0%/0% of on/off-heap limit), flushed range = (null, null]
+DEBUG [PerDiskMemtableFlushWriter_0:1] 2020-01-14 18:11:20,907 Completed flushing /home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-3-big-Data.db (0.118KiB) for commitlog position CommitLogPosition(segmentId=1579003866976, position=41296)
+DEBUG [MemtableFlushWriter:1] 2020-01-14 18:11:21,133 Flushed to [BigTableReader(path='/home/user/cassandra-trunk/build/test/cassandra/data/system_schema/keyspaces-abac5682dea631c5b535b3d6cffd0fb6/na-3-big-Data.db')] (1 sstables, 5.094KiB), biggest 5.094KiB, smallest 5.094KiB
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,155 Creating replication strategy system_auth params KeyspaceParams{durable_writes=true, replication=ReplicationParams{class=org.apache.cassandra.locator.SimpleStrategy, replication_factor=1}}
+DEBUG [MigrationStage:1] 2020-01-14 18:11:21,155 New replication settings for keyspace system_auth - invalidating disk boundary caches
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,161 Initializing system_auth.network_permissions
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,166 Initializing system_auth.resource_role_permissons_index
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,172 Initializing system_auth.role_members
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,181 Initializing system_auth.role_permissions
+INFO  [MigrationStage:1] 2020-01-14 18:11:21,185 Initializing system_auth.roles
+DEBUG [main] 2020-01-14 18:11:21,323 org.jctools-core.MpscChunkedArrayQueue: available
+INFO  [main] 2020-01-14 18:11:21,328 Netty using native Epoll event loop
+INFO  [main] 2020-01-14 18:11:21,437 Using Netty Version: [netty-buffer=netty-buffer-4.1.37.Final.35e0843, netty-codec=netty-codec-4.1.37.Final.35e0843, netty-codec-dns=netty-codec-dns-4.1.37.Final.35e0843, netty-codec-haproxy=netty-codec-haproxy-4.1.37.Final.35e0843, netty-codec-http=netty-codec-http-4.1.37.Final.35e0843, netty-codec-http2=netty-codec-http2-4.1.37.Final.35e0843, netty-codec-memcache=netty-codec-memcache-4.1.37.Final.35e0843, netty-codec-mqtt=netty-codec-mqtt-4.1.37.Final.35e0843, netty-codec-redis=netty-codec-redis-4.1.37.Final.35e0843, netty-codec-smtp=netty-codec-smtp-4.1.37.Final.35e0843, netty-codec-socks=netty-codec-socks-4.1.37.Final.35e0843, netty-codec-stomp=netty-codec-stomp-4.1.37.Final.35e0843, netty-codec-xml=netty-codec-xml-4.1.37.Final.35e0843, netty-common=netty-common-4.1.37.Final.35e0843, netty-handler=netty-handler-4.1.37.Final.35e0843, netty-handler-proxy=netty-handler-proxy-4.1.37.Final.35e0843, netty-resolver=netty-resolver-4.1.37.Final.35e0843, netty-resolver-dns=netty-resolver-dns-4.1.37.Final.35e0843, netty-tcnative=netty-tcnative-2.0.25.Final.c46c351, netty-tcnative-boringssl-static=netty-tcnative-boringssl-static-2.0.25.Final.c46c351, netty-transport=netty-transport-4.1.37.Final.35e0843, netty-transport-native-epoll=netty-transport-native-epoll-4.1.37.Final.35e0843, netty-transport-native-kqueue=netty-transport-native-kqueue-4.1.37.Final.35e0843376, netty-transport-native-unix-common=netty-transport-native-unix-common-4.1.37.Final.35e0843, netty-transport-rxtx=netty-transport-rxtx-4.1.37.Final.35e0843, netty-transport-sctp=netty-transport-sctp-4.1.37.Final.35e0843, netty-transport-udt=netty-transport-udt-4.1.37.Final.35e0843]
+INFO  [main] 2020-01-14 18:11:21,437 Starting listening for CQL clients on /127.0.0.1:9042 (unencrypted)...
+INFO  [ReadStage-1] 2020-01-14 18:11:31,497 Score is: 5.7922E-5
+INFO  [ReadStage-1] 2020-01-14 18:11:31,510 Score is: 5.7922E-5
+INFO  [ReadStage-1] 2020-01-14 18:11:31,521 Score is: 5.7922E-5
+INFO  [OptionalTasks:1] 2020-01-14 18:11:31,734 Created default superuser role 'cassandra'
+DEBUG [BatchlogTasks:1] 2020-01-14 18:11:42,370 Updating batchlog replay throttle to 1024 KB/s, 1024 KB/s per endpoint
+DEBUG [OptionalTasks:1] 2020-01-14 18:11:51,215 Completed submission of build tasks for any materialized views defined at startup
+DEBUG [StorageServiceShutdownHook] 2020-01-14 18:12:39,665 DRAINING: starting drain process
