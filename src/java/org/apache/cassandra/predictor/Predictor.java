@@ -199,7 +199,7 @@ public class Predictor {
 		//servicetime.put(key, stime);
 		//int qsize=get(key).decrementAndGet();
 	   //	logger.info("decrementing pending job inside predictor");
-		String data = key.toString() + " "+l + " " + stime+" "+tag+"\n";
+		/*String data = key.toString() + " "+l + " " + stime+" "+tag+"\n";
 		File file =new File("datatwo.txt");
 		FileWriter fr = null;
 		try
@@ -217,6 +217,6 @@ public class Predictor {
 			{
 				e.printStackTrace();
 			}
-		}
+		}*/
 	} 
 }
